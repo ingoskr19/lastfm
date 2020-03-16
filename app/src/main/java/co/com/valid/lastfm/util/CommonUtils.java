@@ -27,9 +27,4 @@ public final class CommonUtils {
         progressDialog.setCanceledOnTouchOutside(false);
         return progressDialog;
     }
-
-    @SuppressLint("all")
-    public static String getDeviceId(Context context) {
-        return Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
-    }
 }

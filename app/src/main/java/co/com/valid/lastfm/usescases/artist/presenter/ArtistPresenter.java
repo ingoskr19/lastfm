@@ -44,8 +44,9 @@ public class ArtistPresenter<V extends IArtistView, I extends IArtistInteractor>
                 if(geoTopsResponse.getTopartists().getArtist() != null){
                     getView().showTopArtist(geoTopsResponse);
                 }else{
-                    getView().onError("Sin Respuesta");
+                    getView().onError("Without Response");
                 }
+                getView().hideLoading();
             }
 
             @Override
