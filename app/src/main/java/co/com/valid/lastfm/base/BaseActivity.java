@@ -1,5 +1,3 @@
-
-
 package co.com.valid.lastfm.base;
 
 import android.app.Activity;

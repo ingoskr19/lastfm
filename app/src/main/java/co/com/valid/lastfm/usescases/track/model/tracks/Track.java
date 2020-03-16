@@ -9,8 +9,6 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import java.io.Serializable;
 import java.util.List;
 
-import co.com.valid.lastfm.usescases.track.model.Image;
-
 public class Track implements Serializable
 {
 

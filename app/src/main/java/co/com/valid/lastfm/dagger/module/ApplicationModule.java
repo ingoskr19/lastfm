@@ -1,5 +1,3 @@
-
-
 package co.com.valid.lastfm.dagger.module;
 
 import android.app.Application;

@@ -19,6 +19,7 @@ android {
         debug {
             buildConfigField("String", "BASE_URL", "\"http://ws.audioscrobbler.com/2.0/\"")
             buildConfigField("String", "API_KEY", "\"829751643419a7128b7ada50de590067\"")
+            buildConfigField("int", "DB_VERSION", "1")
         }
         release {
             minifyEnabled false
@@ -82,4 +83,8 @@ dependencies {
     //ButterKnife
     implementation 'com.jakewharton:butterknife:10.2.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    //RoomDatabase
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
 }

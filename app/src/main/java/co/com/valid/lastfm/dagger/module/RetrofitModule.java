@@ -2,9 +2,6 @@ package co.com.valid.lastfm.dagger.module;
 
 import java.util.concurrent.TimeUnit;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
-
 import co.com.valid.lastfm.BuildConfig;
 import co.com.valid.lastfm.dagger.annotation.ApplicationContext;
 import co.com.valid.lastfm.dagger.annotation.PerActivity;
