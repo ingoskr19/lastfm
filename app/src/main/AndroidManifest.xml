@@ -8,13 +8,15 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".StartApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".usescases.track.view.activities.TrackActivity">
+        <activity android:name=".usescases.artist.view.activities.ArtistActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".usescases.artist.view.activities.ArtistActivity"
+            android:name=".usescases.track.view.activities.TrackActivity"
             android:launchMode="singleTop"
             android:screenOrientation="fullSensor"
             />

@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatActivity;
 
 import co.com.valid.lastfm.StartApplication;
 import co.com.valid.lastfm.dagger.component.ActivityComponent;
@@ -17,7 +18,7 @@ import co.com.valid.lastfm.dagger.module.ActivityModule;
 import co.com.valid.lastfm.util.CommonUtils;
 import co.com.valid.lastfm.util.ConnectivityUtils;
 
-public abstract class BaseActivity extends Activity
+public abstract class BaseActivity extends AppCompatActivity
         implements IBaseView, BaseFragment.Callback {
 
     private ProgressDialog mProgressDialog;
@@ -57,9 +58,9 @@ public abstract class BaseActivity extends Activity
     @Override
     public void showMessage(String message) {
         if (message != null) {
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(this, "Hubo un error.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Hubo un error.", Toast.LENGTH_LONG).show();
         }
     }
 

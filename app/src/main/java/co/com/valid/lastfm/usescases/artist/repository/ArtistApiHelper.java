@@ -31,6 +31,7 @@ public class ArtistApiHelper implements IArtistApiHelper {
 
     ArtistRestApiService apiService;
 
+    @Inject
     public ArtistApiHelper(ArtistRestApiService apiService) {
         this.apiService = apiService;
     }

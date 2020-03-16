@@ -1,10 +1,16 @@
 package co.com.valid.lastfm.usescases.artist.presenter;
 
+import android.util.Log;
+
 import javax.inject.Inject;
 
 import co.com.valid.lastfm.base.BasePresenter;
 import co.com.valid.lastfm.usescases.artist.interactor.IArtistInteractor;
+import co.com.valid.lastfm.usescases.artist.model.TopsArtistsResponse;
 import co.com.valid.lastfm.usescases.artist.view.activities.IArtistView;
+import co.com.valid.lastfm.util.Constants;
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
 
 public class ArtistPresenter<V extends IArtistView, I extends IArtistInteractor>
         extends BasePresenter<V,I> implements IArtistPresenter<V,I> {
@@ -29,31 +35,31 @@ public class ArtistPresenter<V extends IArtistView, I extends IArtistInteractor>
     }
 
     private void getTopArtistsFromApi(int page, int limit){
-        /*getBaseInteractor().getTopArtists(page,limit).subscribe(new Observer<TopsArtistsResponse>() {
+        getInteractor().getTopArtists(page,limit).subscribe(new Observer<TopsArtistsResponse>() {
 
             @Override public void onSubscribe(Disposable d) { }
 
             @Override
             public void onNext(TopsArtistsResponse geoTopsResponse) {
                 if(geoTopsResponse.getTopartists().getArtist() != null){
-                    getBaseView().showTopArtist(geoTopsResponse);
+                    getView().showTopArtist(geoTopsResponse);
                 }else{
-                    getBaseView().onError("Sin Respuesta");
+                    getView().onError("Sin Respuesta");
                 }
             }
 
             @Override
             public void onError(Throwable e) {
-                getBaseView().onError("Error occurred");
+                getView().onError("Error occurred");
                 Log.e(Constants.TOP_ARTISTS_METHOD, e.getMessage(), e);
-                getBaseView().hideLoading();
+                getView().hideLoading();
             }
 
             @Override
             public void onComplete() {
-                getBaseView().hideLoading();
+                getView().hideLoading();
             }
-        });*/
+        });
     }
 
     private void getTopArtistsFromLocal(){

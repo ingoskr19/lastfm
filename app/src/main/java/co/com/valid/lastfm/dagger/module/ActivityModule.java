@@ -29,9 +29,4 @@ public class ActivityModule {
         return mActivity;
     }
 
-    @Provides
-    @PerActivity
-    IArtistInteractor provideArtistInteractor(ArtistInteractor interactor) {
-        return interactor;
-    }
 }
