@@ -1,10 +1,12 @@
-package co.com.valid.lastfm;
+package co.com.valid.lastfm.usescases.track.view.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class TopsActivity extends AppCompatActivity {
+import co.com.valid.lastfm.R;
+
+public class TrackActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
