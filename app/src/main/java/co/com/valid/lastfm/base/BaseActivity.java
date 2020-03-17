@@ -72,5 +72,4 @@ public abstract class BaseActivity extends AppCompatActivity
         return ConnectivityUtils.isNetworkConnected(getApplicationContext());
     }
 
-    protected abstract void setUp();
 }

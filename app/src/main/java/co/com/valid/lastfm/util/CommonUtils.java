@@ -9,8 +9,6 @@ import co.com.valid.lastfm.R;
 
 public final class CommonUtils {
 
-    private static final String TAG = "CommonUtils";
-
     private CommonUtils() {}
 
     public static ProgressDialog showLoadingDialog(Context context) {

@@ -8,10 +8,15 @@ import javax.inject.Singleton;
 import co.com.valid.lastfm.StartApplication;
 import co.com.valid.lastfm.dagger.annotation.ApplicationContext;
 import co.com.valid.lastfm.dagger.module.ApplicationModule;
+import co.com.valid.lastfm.dagger.module.DataBaseModule;
+import co.com.valid.lastfm.database.LastFmDatabase;
+import co.com.valid.lastfm.database.repository.ArtistRepository;
+import co.com.valid.lastfm.database.repository.ImageRepository;
+import co.com.valid.lastfm.database.repository.TrackRepository;
 import dagger.Component;
 
 @Singleton
-@Component(modules = ApplicationModule.class)
+@Component(modules = {ApplicationModule.class, DataBaseModule.class})
 public interface ApplicationComponent {
 
     void inject(StartApplication app);
@@ -20,5 +25,13 @@ public interface ApplicationComponent {
     Context context();
 
     Application application();
+
+    LastFmDatabase database();
+
+    ArtistRepository artistRepository();
+
+    TrackRepository trackRepository();
+
+    ImageRepository imageRepository();
 
 }

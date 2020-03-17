@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".usescases.artist.view.activities.ArtistActivity">
+        <activity android:name=".usecases.artist.view.activities.ArtistActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".usescases.track.view.activities.TrackActivity"
+            android:name=".usecases.track.view.activities.TrackActivity"
             android:launchMode="singleTop"
             android:screenOrientation="fullSensor"
             />

@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 import co.com.valid.lastfm.dagger.annotation.ApplicationContext;
+import co.com.valid.lastfm.database.LastFmDatabase;
 import dagger.Module;
 import dagger.Provides;
 
@@ -26,5 +27,7 @@ public class ApplicationModule {
     Application provideApplication() {
         return mApplication;
     }
+
+
 
 }
